@@ -15,10 +15,19 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__inner">
           <nav class="header__nav header__menu">
+            <button class="arrow arrow__hide">
+              <a href="#" class="arrow__link">
+                <img
+                  class="arrow__img"
+                  src="./images/up-arrow.svg"
+                  alt="arrow"
+                />
+              </a>
+            </button>
             <button class="menu__btn">
               <span></span>
               <span></span>
@@ -29,20 +38,16 @@
             </button>
             <ul class="header__list header__menu-list">
               <li class="header__item">
-                <a href="#map" class="header__link">Головна</a>
+                <a href="#target" class="header__link">Мета</a>
               </li>
               <li class="header__item">
-                <a href="#statute" class="header__link"
-                  >Устав Громадської Організації</a
-                >
-              </li>
-              <li class="header__item">
-                <a href="#interstatute" class="header__link"
-                  >Внутрішній Устав Громадської Організації</a
-                >
+                <a href="#question" class="header__link">Запитання</a>
               </li>
               <li class="header__item">
                 <a href="#help" class="header__link">Підтримати НАС</a>
+              </li>
+              <li class="header__item">
+                <a href="#contacts" class="header__link">Контакти</a>
               </li>
             </ul>
           </nav>
@@ -50,38 +55,339 @@
       </div>
     </header>
     <main class="main">
-      <section class="map" id="map">
+      <section class="map">
         <div class="container">
           <div class="map__img">
             <img class="map__images" src="./images/logo.png" alt="map" />
           </div>
         </div>
       </section>
-      <section class="statute" id="statute">
+      <section class="target" id="target">
         <div class="container">
-          <div class="statute__inner">
-            <h1 class="title">Устав Громадської Організації</h1>
-            <iframe
-              class="statute__info"
-              src="https://drive.google.com/file/d/1f5b5iW7AJWfa5-khuDKRVZwqqNIoWrEN/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
-            ></iframe>
+          <div class="target__inner">
+            <h1 class="title">Мета</h1>
+            <dl class="target__item">
+              <dt class="target__title">Глава 1: Назва та Цілі</dt>
+              <dd class="target__text">
+                1.1. Назва організації: Український Світанок
+              </dd>
+              <dd class="target__text">
+                1.2. Цілі:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Продвиження прозорості в ухваленні рішень.
+                  </li>
+                  <li class="target__text--list">
+                    - Сприяння демократичним принципам та участі громадян.
+                  </li>
+                  <li class="target__text--list">
+                    - Розширення доступу до інформації про діяльність
+                    організації.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">Глава 2: Структура та Управління</dt>
+              <dd class="target__text">
+                2.1. Загальні Збори Членів:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Регулярні збори для обговорення ключових питань.
+                  </li>
+                  <li class="target__text--list">
+                    - Прийняття рішень більшістю голосів.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                2.2. Рада Директорів:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Формування представників членів.
+                  </li>
+                  <li class="target__text--list">
+                    - Прийняття відповідальності за стратегічні рішення.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                2.3. Прозорість Управління:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Регулярні звіти про діяльність для членів.
+                  </li>
+                  <li class="target__text--list">
+                    - Відкритість фінансів та прийняття рішень.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">Глава 3: Процеси Прийняття Рішень</dt>
+              <dd class="target__text">
+                3.1. Консенсус і Демократія:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Рішення приймаються з урахуванням думки більшості.
+                  </li>
+                  <li class="target__text--list">
+                    - Спрямування до досягнення консенсусу.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                3.2. Відкриті Дебати:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Проведення обговорень перед важливими рішеннями.
+                  </li>
+                  <li class="target__text--list">
+                    - Залучення членів в процес прийняття рішень.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">Глава 4: Прозорість та Інформування</dt>
+              <dd class="target__text">
+                4.1. Доступ до Інформації:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Відкритий доступ до статуту, рішень та звітів.
+                  </li>
+                  <li class="target__text--list">
+                    - Публікація ключових документів на веб-сайті.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                4.2. Зворотний Зв'язок:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Активний зворотний зв'язок з членами та громадськістю.
+                  </li>
+                  <li class="target__text--list">
+                    - Врахування пропозицій та зауважень при прийнятті рішень.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">Глава 5: Заключні Положення</dt>
+              <dd class="target__text">
+                5.1. Внесення Змін до Статуту:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Процес змін статуту з участю членів.
+                  </li>
+                  <li class="target__text--list">
+                    - Дотримання демократичних принципів при змінах.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                5.2. Діяння Статуту:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Статут набуває чинності з моменту затвердження та
+                    зобов'язує всіх членів.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">
+                Глава 6: Електронні Платформи та Боротьба з Корупцією
+                (продовження)
+              </dt>
+              <dd class="target__text">
+                6.1. Боротьба з корупцією:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Строга політика нульової терпимості до корупції в середині
+                    та поза організацією.
+                  </li>
+                  <li class="target__text--list">
+                    - Регулярні аудити для забезпечення прозорості фінансової
+                    діяльності.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">Глава 7: Духовне Наповнення</dt>
+              <dd class="target__text">
+                7.1. Мета організації:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Підтримка різностороннього розвитку особистості.
+                  </li>
+                  <li class="target__text--list">
+                    - Здійснення проектів та заходів, спрямованих на духовний
+                    ріст членів.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                7.2. Навчання та культурні ініціативи:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Організація освітніх програм та заходів, спрямованих на
+                    розширення культурних та духовних горизонтів.
+                  </li>
+                  <li class="target__text--list">
+                    - Підтримка творчості та самовираження членів.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">Глава 8: Прозорість та Інформування</dt>
+              <dd class="target__text">
+                8.1. Співпраця з Науковим Співтовариством:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Активна співпраця з вченими та науковою спільнотою для
+                    розробки та впровадження інновацій.
+                  </li>
+                  <li class="target__text--list">
+                    - Підтримка досліджень, спрямованих на соціальний та
+                    технологічний прогрес.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                8.2. Орієнтація на Людину:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Забезпечення того, щоб наукові дослідження та
+                    технологічний прогрес служили благополуччю та потребам
+                    людей.
+                  </li>
+                  <li class="target__text--list">
+                    - Активна участь членів організації у визначенні пріоритетів
+                    та напрямів розвитку науки та технологій.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">
+                Глава 9: Протидія Корупції та Звільнення з Посад
+              </dt>
+              <dd class="target__text">
+                9.1. Протидія корупції:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Категоричне осудження будь-яких проявів корупції серед
+                    членів організації.
+                  </li>
+                  <li class="target__text--list">
+                    - Систематична інформаційна кампанія щодо наслідків
+                    корупційних дій.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                9.2. Звільнення з посад:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Введення механізму швидкого звільнення осіб, причетних до
+                    корупційних практик, навіть на вищих рівнях керівництва.
+                  </li>
+                  <li class="target__text--list">
+                    - Дотримання процедур звільнення в найкоротший термін, не
+                    перевищуючи два місяці.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">
+                Глава 10: Об'єднання всіх Людей та Преодолення Релігійних,
+                Політичних та Мовних Розбіжностей
+              </dt>
+              <dd class="target__text">
+                10.1. Мета об'єднання:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Продвиження єдності та взаєморозуміння між членами
+                    організації.
+                  </li>
+                  <li class="target__text--list">
+                    - Створення умов для взаємодії та співпраці незалежно від
+                    релігійних, політичних та мовних відмінностей.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                10.2. Принципи толерантності:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Активне поощрення поваги та розуміння різниць у
+                    релігійних, політичних та мовних поглядах.
+                  </li>
+                  <li class="target__text--list">
+                    - Організація заходів, сприяючих діалогу та зближенню
+                    поглядів.
+                  </li>
+                </ul>
+              </dd>
+              <dt class="target__title">
+                Глава 11: Будівництво Найкращої Країни Світу (продовження)
+              </dt>
+              <dd class="target__text">
+                11.1. Ключові напрямки:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Продвиження інновацій та сталого розвитку.
+                  </li>
+                  <li class="target__text--list">
+                    - Підтримка соціальної справедливості та боротьба з
+                    нерівністю.
+                  </li>
+                  <li class="target__text--list">
+                    - Створення умов для активної громадянської участі та
+                    демократичного розвитку.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                11.3. Ключові наслідки:
+                <ul class="target__text--item">
+                  <li class="target__text--list">
+                    - Здійснення проектів та ініціатив, спрямованих на
+                    поліпшення якості життя громадян.
+                  </li>
+                  <li class="target__text--list">
+                    - Розробка і впровадження програм для забезпечення
+                    стабільності та динамічного розвитку країни.
+                  </li>
+                  <li class="target__text--list">
+                    - Сприяння міжнародному співробітництву для обміну кращими
+                    практиками та досягненням спільних цілей.
+                  </li>
+                </ul>
+              </dd>
+              <dd class="target__text">
+                Ця глава розширює загальну мету організації, спрямовану на
+                будівництво найкращої країни світу. Організація закликає до
+                зміцнення цінностей справедливості, рівності та захисту прав
+                людини для створення стійкого та сприятливого суспільства.
+              </dd>
+            </dl>
           </div>
         </div>
       </section>
-      <section class="interstatute" id="interstatute">
+      <section class="question" id="question">
         <div class="container">
-          <div class="interstatute__inner">
-            <h1 class="title">Внутрішній Устав Громадської Організації</h1>
-            <iframe
-              class="interstatute__info"
-              src="https://drive.google.com/file/d/1oX9vh38gEXu2bQ6OZqhlvsMCuYes4rP6/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
-            ></iframe>
+          <div class="question__inner">
+            <div class="question__title">
+              <h1 class="title">Маєте Запитання?</h1>
+              <p class="question__text">*Ми нікому не передаемо ваші данні.</p>
+            </div>
+            <form class="question__form">
+              <input
+                class="question__form-input"
+                placeholder="Ваше ім'я"
+                type="text"
+              />
+              <input
+                class="question__form-input"
+                placeholder="Ваш e-mail"
+                type="email"
+              />
+              <textarea
+                class="question__form-area"
+                placeholder="Ваше Запитання"
+              ></textarea>
+              <button class="question__form-btn" type="submit">
+                Відправити
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -93,10 +399,26 @@
               <li class="help__list">
                 <img
                   class="help__grcode"
-                  src="./images/qr-code-gm.svg"
+                  src="./images/qr-code-UA.svg"
                   alt="gr-code"
                 />
-                <h2 class="help__list-title">E-Mail</h2>
+                <h2 class="help__list-title">Рахунок UA</h2>
+              </li>
+              <li class="help__list">
+                <img
+                  class="help__grcode"
+                  src="./images/qr-code-EUR.svg"
+                  alt="gr-code"
+                />
+                <h2 class="help__list-title">Рахунок EUR</h2>
+              </li>
+              <li class="help__list">
+                <img
+                  class="help__grcode"
+                  src="./images/qr-code-USD.svg"
+                  alt="gr-code"
+                />
+                <h2 class="help__list-title">Рахунок USD</h2>
               </li>
               <li class="help__list">
                 <img
@@ -110,13 +432,60 @@
           </div>
         </div>
       </section>
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="contacts__inner">
+            <h1 class="title">Контакти</h1>
+            <div class="contacts__info">
+              <h2 class="contacts__info--title">Голова організації</h2>
+              <p class="contacts__name">Димура Андрій Антонович</p>
+              <address class="contacts__address">
+                <a href="mailto:UkrainianDawn@gmail.com"
+                  >UkrainianDawn@gmail.com</a
+                >
+                <a href="tel:+380664935766">+38(066) 493-57-66</a>
+                <a href="tel:+380968939968">+38(096) 893-99-68</a>
+              </address>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <a href="#" class="header__logo">
+          <a href="#" class="footer__logo">
             <img src="./images/logo-footer.jpg" alt="logo" />
           </a>
+          <ul class="footer__social-item">
+            <li class="footer__social-list">
+              <a href="https://t.me/SergeiBogko" class="footer__social-link">
+                <img
+                  class="footer__social-img"
+                  src="./images/telegram.svg"
+                  alt="Telegram"
+                />
+              </a>
+            </li>
+            <li class="footer__social-list">
+              <a href="#" class="footer__social-link">
+                <img
+                  class="footer__social-img"
+                  src="./images/facebook.svg"
+                  alt="Facebook"
+                />
+              </a>
+            </li>
+            <li class="footer__social-list">
+              <a href="#" class="footer__social-link">
+                <img
+                  class="footer__social-img"
+                  src="./images/youtube.svg"
+                  alt="YouTube"
+                />
+              </a>
+            </li>
+          </ul>
           <div class="footer__wraper">
             <p class="footer__text">
               Громадська Організація "Український Світакнок"

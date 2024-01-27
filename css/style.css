@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -43,6 +44,30 @@ button {
     align-items: center;
     justify-content: end;
 }
+.header__list {
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+}
+.arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: fixed;
+    border-radius: 50%;
+    right: 25px;
+    bottom: 50px;
+    /* transition: all 0.5s ease 0s; */
+}
+.arrow__hide {
+    display: none;
+    transition: 1s;
+}
+.arrow__img {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+}
 .menu__btn {
     display: none;
     width: 30px;
@@ -60,13 +85,7 @@ button {
     background-color: #fff;
     width: 100%;
 }
-.header__list {
-    display: flex;
-    gap: 30px;
-}
-.header__link {
-    text-transform: uppercase;
-}
+
 .map {
     margin-bottom: 100px;
     background-image: url(../images/banner.jpg);
@@ -89,20 +108,22 @@ button {
     height: 800px;
 }
 .map__images {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     position: relative;
     bottom: 70px;
     left: 50px;
 }
-.statute,
-.interstatute,
-.helpus {
+.target,
+.question,
+.help,
+.contacts {
     margin-bottom: 100px;
 }
-.statute__inner,
-.interstatute__inner,
-.help__inner {
+.target__inner,
+.question__inner,
+.help__inner,
+.contacts__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -114,19 +135,79 @@ button {
     font-size: 42px;
     font-weight: 700;
     line-height: 1.4;
-    
 }
-.statute__info,
-.interstatute__info {
+.target__title,
+.target__text {
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    max-height: 500px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    border-radius: 10px;
+    padding: 10px 5px 5px 5px;
+    list-style-position: inside;
+}
+.target__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.question__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.question__form-input {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 15px 17px;
+    margin-bottom: 15px;
+    width: 50%;
+}
+.question__form-input::placeholder {
+    color: #a1a1a1;
+    font-family: El Messiri;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+.question__form-area {
     width: 100%;
-    height: 600px;
+    border: 1px solid #dfdfdf;
+    border-radius: 24px;
+    padding: 14px 17px;
+    margin-bottom: 20px;
+    min-height: 125px;
+    resize: none;
+}
+.question__form-area::placeholder {
+    color: #a1a1a1;
+    font-family: El Messiri;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+.question__form-btn {
+    border: none;
+    background-color: #363838;
+    color: #fffff0;
+    font-weight: 700;
+    border-radius: 21px;
+    padding: 15px 60px;
+    cursor: pointer;
+}
+.question__form-btn:hover {
+    background-color: #018ABE;
 }
 .help__inner {
     margin-bottom: 100px;
 }
 .help__item {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 100px;
 }
 .help__list {
@@ -135,7 +216,6 @@ button {
 }
 .help__grcode {
     max-width: 250px;
-    max-height: 250px;
     margin-bottom: 30px;
 }
 .help__list-title {
@@ -144,10 +224,36 @@ button {
     font-weight: 700;
     line-height: 1.4;
 }
+.contacts__info--title,
+.contacts__name {
+    font-family: El Messiri;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+.contacts__address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: El Messiri;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
 .footer__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.footer__social-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer__social-img {
+    width: 40px;
+    height: 40px;
 }
 
 @media (max-width: 1320px) {
@@ -155,24 +261,16 @@ button {
         width: 1200px;
         height: 800px;
     }
-    .statute__info,
-    .interstatute__info {
-        width: 800px;
-        height: 600px;
-    }
 }
 @media (max-width: 1230px) {
-    .statute__inner,
-    .interstatute__inner,
-    .help__inner {
+    .target__inner,
+    .question__inner,
+    .help__inner,
+    .contacts__inner {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    }
-    .statute__info,
-    .interstatute__info {
-        width: 800px;
     }
     .help__item {
         gap: 50px;
@@ -192,6 +290,10 @@ button {
 @media (max-width: 995px) {
     .map__img {
         width: 750px;
+    }
+    .map__images {
+        width: 200px;
+        height: 200px;
     }
     .title {
         max-width: 250px;
@@ -237,14 +339,10 @@ button {
         height: 450px;
     }
     .map__images {
-        width: 50px;
-        height: 50px;
+        width: 150px;
+        height: 150px;
         bottom: 35px;
         left: 25px;
-    }
-    .statute__info,
-    .interstatute__info {
-        width: 100%;
     }
 }
 @media (max-width: 680px) {
@@ -253,20 +351,38 @@ button {
         height: 250px;
     }
     .map__images {
-        width: 25px;
-        height: 25px;
+        width: 80px;
+        height: 80px;
         bottom: 20px;
         left: 15px;
     }
+    .target__item {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .target__title,
+    .target__text {
+        width: 100%;
+    }
     .help__item {
+        display: flex;
         flex-direction: column;
         gap: 100px;
     }
     .help__list { 
         margin-right: 0;
     }
+    .help__grcode {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 450px) {
+    .footer__inner {
+        flex-direction: column;
+        gap: 50px;
+    }
     .footer__wraper {
         width: 250px;
         text-align: right;
