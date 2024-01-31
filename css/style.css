@@ -134,23 +134,23 @@ button {
 .question__inner,
 .help__inner,
 .contacts__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 20px;
 }
 .title {
-    max-width: 350px;
     font-family: El Messiri;
     font-size: 42px;
     font-weight: 700;
     line-height: 1.4;
+    margin-bottom: 50px;
 }
 .target__title,
 .target__text {
     margin-bottom: 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: #fff;
     max-width: 800px;
     max-height: 500px;
     font-size: 18px;
@@ -164,6 +164,12 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+}
+.question--title {
+    margin-bottom: 5px;
+}
+.question__text {
+    margin-bottom: 50px;
 }
 .question__form {
     display: flex;
