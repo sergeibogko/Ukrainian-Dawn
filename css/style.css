@@ -457,17 +457,27 @@ button {
         max-width: 200px;
         margin-bottom: 20px;
     }
+    .footer__social-item {
+        margin: 0 10px 0 10px;
+    }
+    .footer__text {
+        width: 100%;
+        text-align: right;
+    }
     .form__join {
         width: 100%;
     }
 }
 @media (max-width: 450px) {
+    .footer {
+        margin-bottom: 50px;
+    }
     .footer__inner {
         flex-direction: column;
         gap: 50px;
     }
     .footer__wraper {
-        width: 250px;
+        width: 100%;
         text-align: right;
     }
 }
