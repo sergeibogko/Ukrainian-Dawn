@@ -1,10 +1,49 @@
+//  menuBurger
 const menuBtn = document.querySelector('.menu__btn');
 const menuMobile = document.querySelector('.header__list');
+if (menuBtn) {
+  menuBtn.addEventListener('click', function (e) {
+    document.body.classList.toggle('_lock');
+    menuBtn.classList.toggle('menu--open');
+    menuMobile.classList.toggle('menu--open');
+  });
+}
 
-menuBtn.addEventListener('click', () => {
-  menuMobile.classList.toggle('menu--open');
-});
+// menuBtn.addEventListener('click', () => {
+//   menuMobile.classList.toggle('menu--open');
+// });
+// Прокрутка при клике
+const menuLinks = document.querySelectorAll('.header__link[data-goto]');
+if (menuLinks.length > 0) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener('click', onMenuLinkClick);
+  });
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (
+      menuLink.dataset.goto &&
+      document.querySelector(menuLink.dataset.goto)
+    ) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue =
+        gotoBlock.getBoundingClientRect().top +
+        pageYOffset -
+        document.querySelector('header').offsetHeight;
+      if (menuBtn.classList.contains('menu--open')) {
+        document.body.classList.remove('_lock');
+        menuBtn.classList.remove('menu--open');
+        menuMobile.classList.remove('menu--open');
+      }
 
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth',
+      });
+      e.preventDefault();
+    }
+  }
+}
+// arrowUp
 const btnUp = {
   el: document.querySelector('.arrow'),
   show() {

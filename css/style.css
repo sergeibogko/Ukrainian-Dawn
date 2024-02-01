@@ -17,6 +17,9 @@ body {
     line-height: 1.2;
     background-color: #162831;
 }
+body._lock {
+    overflow: hidden;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -48,6 +51,9 @@ button {
     display: flex;
     gap: 30px;
     text-transform: uppercase;
+}
+.header__link:hover { 
+    text-decoration: underline;
 }
 .header__item-btn {
     text-transform: uppercase;
@@ -394,26 +400,7 @@ button {
     .header__menu {
         order: 1;
     }
-    .menu__btn {
-        display: flex;
-    }
-    .header__menu-list {
-        width: 153px;
-        background-color: #000;
-        color: #FFF8F3;
-        flex-direction: column;
-        gap: 20px 0;
-        padding: 25px 35px 25px 45px;
-        position: absolute;
-        left: 0;
-        top: 105px;
-        transform: translateX(-110%);
-        transition: transform .5s ease;
-        z-index: 5;
-    }
-    .header__menu-list.menu--open {
-        transform: translateX(0);
-    }
+
     .join__text {
         font-size: 18px;
         line-height: 1;
@@ -472,6 +459,35 @@ button {
     }
     .form__join {
         width: 100%;
+    }
+}
+@media (max-width: 570px) {
+    .menu__btn {
+        display: flex;
+        z-index: 1;
+    }
+    .header__menu-list {
+        width: 100%;
+        background-color: #000;
+        color: #FFF8F3;
+        flex-direction: column;
+        gap: 20px 0;
+        padding: 25px 35px 25px 45px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateY(-120%);
+        transition: transform .5s ease;
+        z-index: 5;
+        text-align: center;
+        gap: 100px;
+        margin-top: 100px;
+        padding-top: 100px;
+    }
+    .header__menu-list.menu--open {
+        transform: translateX(0);
     }
 }
 @media (max-width: 450px) {
