@@ -8,10 +8,6 @@ if (menuBtn) {
     menuMobile.classList.toggle('menu--open');
   });
 }
-
-// menuBtn.addEventListener('click', () => {
-//   menuMobile.classList.toggle('menu--open');
-// });
 // Прокрутка при клике
 const menuLinks = document.querySelectorAll('.header__link[data-goto]');
 if (menuLinks.length > 0) {
